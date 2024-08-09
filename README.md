@@ -95,5 +95,4 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
 - Add more robust error handling.
 - Implement a more secure password storage mechanism.
 - Expand admin functionalities for managing users and timetables.
-- Add the ability to update and delete records.
 
