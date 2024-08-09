@@ -31,12 +31,12 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
 
 ##  Run : 
 1. **Clone the Repository**:
-   ```
+   ```bash
    git clone https://github.com/ns7523/Timetable-Management-System.git
    cd Timetable-Management-System
    ```
 2. **Launch the Application**:
-   ```
+   ```zsh
    python main.py
    ```
 3. **Ensure Dependencies are Met**:
@@ -52,35 +52,45 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
 
 ## Database Structure
 - **FACULTY Table**:
-  ``` bash
-  CREATE TABLE FACULTY (FID CHAR(10) NOT NULL PRIMARY KEY,
-  PASSW CHAR(50) NOT NULL, NAME CHAR(50) NOT NULL,
-  INI CHAR(5) NOT NULL, EMAIL CHAR(50) NOT NULL,
-  SUBCODE1 char(10) NOT NULL, SUBCODE2 char(10) )
-  ```
+  ```bash
+  CREATE TABLE FACULTY  (
+    FID CHAR(10) NOT NULL PRIMARY KEY,
+    PASSW CHAR(50) NOT NULL,
+    NAME CHAR(50) NOT NULL,
+    INI CHAR(5) NOT NULL,
+    EMAIL CHAR(50) NOT NULL,
+    SUBCODE1 char(10) NOT NULL,
+    SUBCODE2 char(10)  );
+  
 - **SCHEDULE Table**:
-  ``` bash
-  CREATE TABLE SCHEDULE(ID CHAR(10) NOT NULL,
-  DAYID INT NOT NULL,PERIODID INT NOT NULL,
-  SUBCODE CHAR(10) NOT NULL,
-  SECTION CHAR(5) NOT NULL,
-  FINI CHAR(5) NOT NULL)
-  ```
+  ```bash
+  CREATE TABLE SCHEDULE  (
+    ID CHAR(10) NOT NULL,
+    DAYID INT NOT NULL,
+    PERIODID INT NOT NULL,
+    SUBCODE CHAR(10) NOT NULL,
+    SECTION CHAR(5) NOT NULL,
+    FINI CHAR(5) NOT NULL  );
+  
 - **STUDENT Table**:
-  ``` bash
-  CREATE TABLE STUDENT (SID CHAR(10) NOT NULL PRIMARY KEY,
-  PASSW CHAR(50) NOT NULL, NAME CHAR(50) NOT NULL,
-  ROLL CHAR(5) NOT NULL, SECTION CHAR(5) NOT NULL)
-  ```
+  ```bash
+  CREATE TABLE STUDENT  (
+    SID CHAR(10) NOT NULL PRIMARY KEY,
+    PASSW CHAR(50) NOT NULL,
+    NAME CHAR(50) NOT NULL,
+    ROLL CHAR(5) NOT NULL,
+    SECTION CHAR(5) NOT NULL  );
+  
 - **SUBJECTS Table**:
-  ``` bash
-  CREATE TABLE SUBJECTS (SUBCODE CHAR(10) NOT NULL PRIMARY KEY,
-  SUBNAME CHAR(50) NOT NULL, SUBTYPE CHAR(1) NOT NULL)
-  ```
+  ```bash
+  CREATE TABLE SUBJECTS (
+    SUBCODE CHAR(10) NOT NULL PRIMARY KEY,
+    SUBNAME CHAR(50) NOT NULL,
+    SUBTYPE CHAR(1) NOT NULL  );
+
 - **sqlite_sequence**:
   ``` bash
-  CREATE TABLE sqlite_sequence(name,seq)
-  ```
+  CREATE TABLE sqlite_sequence(name,seq)  ;
 
 ## Future Improvements
 - Add more robust error handling.
