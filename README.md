@@ -17,8 +17,7 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
 - The following Python modules: `os`, `sys`, `sqlite3`
 
 ## Folder Structure
-
-```
+```sql
 ├── windows/
 │   ├── timetable_stud.py       # Handles student timetable interface
 │   ├── timetable_fac.py        # Handles faculty timetable interface
@@ -36,7 +35,7 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
    cd Timetable-Management-System
    ```
 2. **Launch the Application**:
-   ```zsh
+   ```bash
    python main.py
    ```
 3. **Ensure Dependencies are Met**:
@@ -52,7 +51,7 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
 
 ## Database Structure
 - **FACULTY Table**:
-  ```bash
+  ```sql
   CREATE TABLE FACULTY  (
     FID CHAR(10) NOT NULL PRIMARY KEY,
     PASSW CHAR(50) NOT NULL,
@@ -63,7 +62,7 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
     SUBCODE2 char(10)  );
   
 - **SCHEDULE Table**:
-  ```bash
+  ```sql
   CREATE TABLE SCHEDULE  (
     ID CHAR(10) NOT NULL,
     DAYID INT NOT NULL,
@@ -73,7 +72,7 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
     FINI CHAR(5) NOT NULL  );
   
 - **STUDENT Table**:
-  ```bash
+  ```sql
   CREATE TABLE STUDENT  (
     SID CHAR(10) NOT NULL PRIMARY KEY,
     PASSW CHAR(50) NOT NULL,
@@ -82,14 +81,14 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
     SECTION CHAR(5) NOT NULL  );
   
 - **SUBJECTS Table**:
-  ```bash
+  ```sql
   CREATE TABLE SUBJECTS (
     SUBCODE CHAR(10) NOT NULL PRIMARY KEY,
     SUBNAME CHAR(50) NOT NULL,
     SUBTYPE CHAR(1) NOT NULL  );
 
 - **sqlite_sequence**:
-  ``` bash
+  ```sql
   CREATE TABLE sqlite_sequence(name,seq)  ;
 
 ## Future Improvements
