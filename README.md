@@ -58,8 +58,8 @@ This is a simple GUI-based Timetable Management System built using Python's Tkin
     NAME CHAR(50) NOT NULL,
     INI CHAR(5) NOT NULL,
     EMAIL CHAR(50) NOT NULL,
-    SUBCODE1 char(10) NOT NULL,
-    SUBCODE2 char(10)  );
+    SUBCODE1 CHAR(10) NOT NULL,
+    SUBCODE2 CHAR(10)  );
   
 - **SCHEDULE Table**:
   ```sql
